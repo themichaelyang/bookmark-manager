@@ -1,0 +1,17 @@
+{
+  "name": "Mike's Bookmark Manager",
+  "version": "0.1",
+  "description": "Nicer bookmarks.",
+  "manifest_version": 2,
+
+  "icons": {
+    "48": "icons/bookmark-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.*"],
+      "js": ["bookmark.js"]
+    }
+  ]
+}
