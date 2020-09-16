@@ -1,17 +1,23 @@
 {
   "name": "Mike's Bookmark Manager",
   "version": "0.1",
-  "description": "Nicer bookmarks.",
+  "description": "a nicer bookmark manager",
   "manifest_version": 2,
 
   "icons": {
     "48": "icons/bookmark-48.png"
   },
 
+  "browser_action": {
+    "default_icon": "icons/bookmark-48.png",
+    "default_title": "Bookmark Manager",
+    "default_popup": "src/popup.html"
+  },
+
   "content_scripts": [
     {
-      "matches": ["*://*.*"],
-      "js": ["bookmark.js"]
+      "matches": ["<all_urls>"],
+      "js": ["src/webpage.js"]
     }
   ]
 }
